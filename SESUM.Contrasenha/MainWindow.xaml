@@ -19,9 +19,9 @@
                     <GradientStop Color="#FF2D5949" Offset="1"/>
                 </LinearGradientBrush>
             </Border.Background>
-            <DockPanel Height="60
-                       " >
-                <Image Source="{StaticResource Brasao}" DockPanel.Dock="Left" Margin="10,0,0,0" >
+            <DockPanel Height="60" >
+                <Image Source="{StaticResource Brasao}" DockPanel.Dock="Left"
+                       Margin="10,0,0,0" >
                     <Image.Effect>
                         <DropShadowEffect />
                     </Image.Effect>
@@ -30,8 +30,8 @@
                            DockPanel.Dock="Top"
                            TextAlignment="Center" 
                            FontFamily="Arial" Margin="0,5,0,0">
-                    <Run Text="Subsistema de Instalação Segura"/>
-                    <Run Text="nça"/></TextBlock>
+                    <Run Text="Subsistema de Instalação Segurança"/>
+                    </TextBlock>
                 <TextBlock DockPanel.Dock="Bottom" 
                            TextAlignment="Right" 
                            VerticalAlignment="Bottom" 
@@ -87,29 +87,52 @@
                     Dados para Contrassenha
                         </TextBlock>
                     </Border>
-
+                    <!-- Label de Rótulos do Formulário -->
                     <Label Grid.Row="1">Data:</Label>
                     <Label Grid.Row="2">Hora:</Label>
                     <Label Grid.Row="3">Computador:</Label>
                     <Label Grid.Row="4">Titulo:</Label>
                     <Label Grid.Row="5">Código:</Label>
                     <Label Grid.Row="6">Municipio/Zona:</Label>
+                    
+                    <!-- Fim dos Rótulos do Formulários -->
+                    
+                    <!-- Rótulo de Informação do tipo de contrassenha-->
                     <Label Grid.Row="7" Grid.ColumnSpan="2" 
                            HorizontalAlignment="Center"
                           FontSize="14" FontWeight="Bold"
                            Margin="0,10,0,0"
                           >Contrassenha 2020</Label>
-
-                    <Label Grid.Row="1" Grid.Column="1" 
-                           FontWeight="Bold" 
-                           FontFamily="Microsoft Sans Serif"
-                           FontSize="16"
-                           VerticalAlignment="Center">30/03/2021</Label>
-                    <Label Grid.Row="2" Grid.Column="1" FontWeight="Bold" FontFamily="Microsoft Sans Serif" VerticalAlignment="Center">14:03</Label>
-                    <Label Grid.Row="3" Grid.Column="1" FontWeight="Bold" FontFamily="Microsoft Sans Serif" VerticalAlignment="Center">ZMA014STD54975</Label>
-                    <Label Grid.Row="4" Grid.Column="1" FontWeight="Bold" FontFamily="Microsoft Sans Serif" VerticalAlignment="Center">10191</Label>
-                    <Label Grid.Row="5" Grid.Column="1" FontWeight="Bold" FontFamily="Microsoft Sans Serif" VerticalAlignment="Center">263</Label>
-                    <Label Grid.Row="6" Grid.Column="1" FontWeight="Bold" FontFamily="Microsoft Sans Serif" VerticalAlignment="Center">0</Label>
+                    <!-- Fim do rótulo de informação do tipo de contrassenha-->
+                    
+                    <!-- Início dos campos com os valores da contrassenha-->
+                    <Label Grid.Row="1" 
+                           Grid.Column="1" 
+                           Style="{StaticResource LabelCamposValores}"
+                           >30/03/2021</Label>
+                    
+                    <Label Grid.Row="2" 
+                           Grid.Column="1"
+                           Style="{StaticResource LabelCamposValores}">
+                        14:03</Label>
+                    <Label Grid.Row="3" 
+                           Grid.Column="1"
+                            Style="{StaticResource LabelCamposValores}"                          
+                           >ZMA014STD54975</Label>
+                    <Label Grid.Row="4" 
+                           Grid.Column="1" 
+                           Style="{StaticResource LabelCamposValores}"
+                           >10191</Label>
+                    <Label Grid.Row="5" 
+                           Grid.Column="1"                          
+                           Style="{StaticResource LabelCamposValores}"
+                          >263</Label>
+                    <Label 
+                        Grid.Row="6" 
+                        Grid.Column="1"
+                        Style="{StaticResource LabelCamposValores}">
+                        0</Label>                
+                   <!-- Fim dos compos com valores da contrassenha-->
                 </Grid>
             </Border>
         </StackPanel>
@@ -117,7 +140,6 @@
             Com base nestes dados, lhe será fornecida uma SENHA DE AUTORIZAÇÃO.
            Digite-a no campo abaixo. Tecle &lt;OK&gt; para confirmar ou &lt;CANCELAR&gt;
             para abortar a operação.
-
         </TextBlock>
         <Border BorderBrush="Black" BorderThickness="1"
                 Margin="30,10,30,0"
@@ -128,7 +150,7 @@
 
             </TextBox>
         </Border>
-        
+
         <WrapPanel HorizontalAlignment="Center" Margin="0,20">
             <Button Style="{x:Null}" Width="130" Height="35" Margin="0,0,29,0" Click="Button_Click">OK</Button>
             <Button Style="{x:Null}" Width="130">Cancel</Button>
